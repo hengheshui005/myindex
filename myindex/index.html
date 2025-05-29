@@ -1,0 +1,253 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李峰个人网站 - 简介</title> 
+    <style> 
+        /* 新增背景图片样式 */
+        body { 
+            margin: 0; 
+            font-family: Arial, sans-serif;
+            background-image: url('images/IMG_20240301_121219.jpg');  
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            position: relative;
+        }
+        
+        /* 背景遮罩层增强可读性 */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+        }
+ 
+        /* 导航栏样式优化 */ 
+        nav { 
+            background: rgba(51, 51, 51, 0.9);
+            padding: 15px; 
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        } 
+ 
+        nav ul { 
+            display: flex; 
+            justify-content: center; 
+            list-style: none; 
+            margin: 0; 
+            padding: 0; 
+            flex-wrap: wrap;
+        } 
+ 
+        nav li { 
+            margin: 0 15px; 
+        } 
+ 
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-size: 16px; 
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        } 
+ 
+        nav a:hover { 
+            color: #00a7d0; 
+            transform: translateY(-2px);
+        } 
+ 
+        /* 主要内容区域样式 */
+        .content-wrapper {
+            min-height: calc(100vh - 120px);
+            display: flex;
+            flex-direction: column;
+        }
+ 
+        /* 修改后的简介模块布局 - 靠左半透明动画展示 */
+        .intro { 
+            position: relative;
+            max-width: 500px;
+            margin: 50px 0 30px 50px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(5px);
+            animation: slideInLeft 0.8s ease-out both;
+            transform-origin: left center;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+ 
+        @keyframes slideInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+        
+        .intro:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+ 
+        .intro img { 
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            margin: 20px auto;
+            display: block;
+            border: 3px solid rgba(0, 167, 208, 0.3);
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .intro img:hover {
+            transform: scale(1.05) rotate(5deg);
+            border-color: rgba(0, 167, 208, 0.5);
+        }
+ 
+        .intro h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: left;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .intro h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #00a7d0, rgba(0, 167, 208, 0));
+        }
+        
+        .intro p {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: left;
+            margin-top: 20px;
+        } 
+ 
+        /* 社交链接样式 */ 
+        .social-links { 
+            text-align: center; 
+            padding: 20px;
+            margin-top: auto;
+        } 
+ 
+        .social-links a { 
+            margin: 0 8px; 
+            color: #333; 
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        } 
+ 
+        .social-links a:hover { 
+            color: #00a7d0; 
+            background-color: rgba(0, 167, 208, 0.1);
+            transform: translateY(-2px);
+        } 
+        
+        /* 响应式社交链接 */
+        @media (max-width: 768px) {
+            .social-links {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .social-links a {
+                margin: 5px 0;
+            }
+ 
+            /* 响应式调整简介模块 */
+            .intro {
+                margin: 30px auto;
+                max-width: 85%;
+                animation: none;
+                transform: none;
+            }
+        }
+ 
+        /* 页脚样式 */ 
+        footer { 
+            background: rgba(51, 51, 51, 0.9); 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+            width: 100%; 
+            backdrop-filter: blur(5px);
+        } 
+        
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style> 
+</head> 
+ 
+<body> 
+    <div class="content-wrapper">
+        <!-- 导航栏 --> 
+        <nav> 
+            <ul> 
+                <li><a href="index.html">  简介</a></li> 
+                <li><a href="gallery.html">  图片</a></li> 
+                <li><a href="video.html">  视频</a></li> 
+                <li><a href="news.html">  新闻</a></li> 
+                <li><a href="interactive.html">  互动</a></li> 
+            </ul> 
+        </nav> 
+ 
+        <!-- 修改后的简介模块 --> 
+        <section class="intro"> 
+            <h1>关于李峰</h1> 
+            <img src="images/logo.png"   alt="李峰个人网站"> 
+            <p>欢迎来到我的个人网站！这里展示我的摄影作品、视频创作和最新动态...</p> 
+        </section> 
+        
+        <!-- 社交链接区域 --> 
+        <div class="social-links"> 
+            <a href="https://github.com"   target="_blank">GitHub</a> 
+            <a href="https://twitter.com"   target="_blank">X</a> 
+            <a href="https://www.linkedin.com"   target="_blank">LinkedIn</a> 
+            <a href="https://www.facebook.com"   target="_blank">Facebook</a> 
+            <a href="https://www.instagram.com"   target="_blank">Instagram</a> 
+            <a href="https://www.tumblr.com"   target="_blank">Tumblr</a> 
+            <a href="https://www.reddit.com"   target="_blank">Reddit</a> 
+            <a href="https://www.dribbble.com"   target="_blank">Dribbble</a> 
+            <a href="https://etherscan.io"   target="_blank">Etherscan</a> 
+            <a href="https://www.medium.com"   target="_blank">Medium</a> 
+        </div> 
+    </div> 
+    
+    <!-- 页脚 --> 
+    <footer> 
+        <p>© 2025 李峰个人网站 | 联系邮箱：305071707@qq.com</p>    
+    </footer> 
+</body> 
+</html>

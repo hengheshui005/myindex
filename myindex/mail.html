@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球邮箱登录导航</title>
+    <style>
+        /* 基础样式参考[7][8]优化版 */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+        }
+ 
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f6fa;
+            margin: 0;
+            padding: 20px;
+        }
+ 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+ 
+        .mail-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+ 
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+        }
+ 
+        .mail-list {
+            list-style: none;
+            padding: 0;
+        }
+ 
+        .mail-item {
+            margin: 12px 0;
+            transition: transform 0.2s;
+        }
+ 
+        .mail-item a {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            text-decoration: none;
+            color: #333;
+            border-radius: 5px;
+            background: #f8f9fa;
+        }
+ 
+        .mail-item a:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateX(10px);
+        }
+ 
+        .mail-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 国内邮箱区域 -->
+        <div class="mail-section">
+            <h2>🇨🇳 国内邮箱服务</h2>
+            <ul class="mail-list">
+                <li class="mail-item"><a href="https://mail.qq.com"  target="_blank">
+                    <img src="qq-icon.png"  class="mail-icon" alt="QQ邮箱">QQ邮箱 
+                </a></li>
+                <li class="mail-item"><a href="https://mail.163.com"  target="_blank">
+                    <img src="163-icon.png"  class="mail-icon" alt="163邮箱">163网易邮箱 
+                </a></li>
+                <!-- 其他国内邮箱（共10个） -->
+                <li class="mail-item"><a href="https://mail.sina.com.cn"  target="_blank">新浪邮箱</a></li>
+                <li class="mail-item"><a href="https://mail.126.com"  target="_blank">126邮箱</a></li>
+                <li class="mail-item"><a href="https://vip.163.com"  target="_blank">网易VIP邮箱</a></li>
+                <li class="mail-item"><a href="https://mail.aliyun.com"  target="_blank">阿里云邮箱</a></li>
+                <li class="mail-item"><a href="https://mail.10086.cn"  target="_blank">139邮箱</a></li>
+                <li class="mail-item"><a href="https://mail.sohu.com"  target="_blank">搜狐邮箱</a></li>
+                <li class="mail-item"><a href="https://mail.tom.com"  target="_blank">TOM邮箱</a></li>
+                <li class="mail-item"><a href="https://exmail.qq.com"  target="_blank">腾讯企业邮箱</a></li>
+            </ul>
+        </div>
+ 
+        <!-- 国际邮箱区域 -->
+        <div class="mail-section">
+            <h2>🌍 国际邮箱服务</h2>
+            <ul class="mail-list">
+                <li class="mail-item"><a href="https://mail.google.com"  target="_blank">
+                    <img src="gmail-icon.png"  class="mail-icon" alt="Gmail">Gmail 
+                </a></li>
+                <li class="mail-item"><a href="https://outlook.live.com"  target="_blank">
+                    <img src="outlook-icon.png"  class="mail-icon" alt="Outlook">Outlook 
+                </a></li>
+                <!-- 其他国际邮箱（共10个） -->
+                <li class="mail-item"><a href="https://mail.yahoo.com"  target="_blank">Yahoo Mail</a></li>
+                <li class="mail-item"><a href="https://proton.me/mail"  target="_blank">ProtonMail</a></li>
+                <li class="mail-item"><a href="https://mail.zoho.com"  target="_blank">Zoho Mail</a></li>
+                <li class="mail-item"><a href="https://icloud.com/mail"  target="_blank">iCloud Mail</a></li>
+                <li class="mail-item"><a href="https://mail.aol.com"  target="_blank">AOL Mail</a></li>
+                <li class="mail-item"><a href="https://mail.yandex.com"  target="_blank">Yandex.Mail</a></li>
+                <li class="mail-item"><a href="https://gmx.com"  target="_blank">GMX Mail</a></li>
+                <li class="mail-item"><a href="https://mail.com"  target="_blank">Mail.com</a></li> 
+            </ul>
+        </div>
+    </div>
+</body>
+ <div class="footer">
+        <p>
+            <i class="fas fa-envelope footer-icon"></i> 
+            从此复制收件地址：
+            <a href="mailto:305071707@qq.com">305071707@qq.com</a>
+            <br>
+            <small>（推荐使用QQ邮箱发送）</small>
+        </p>
+    </div>
+</body>
+</html>

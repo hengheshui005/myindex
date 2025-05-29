@@ -1,0 +1,107 @@
+<style>
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.news-section {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news-section h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.news-article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 6px;
+}
+
+.news-article time {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.news-article p {
+    color: #34495e;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.social-news ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-news li {
+    margin: 12px 0;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.social-news a {
+    color: #2980b9;
+    text-decoration: none;
+    display: block;
+}
+
+.social-news a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<div class="news-container">
+    <!-- 个人新闻 -->
+    <section class="news-section personal-news">
+        <h2>个人动态</h2>
+        <article class="news-article">
+            <time>2025-04-17</time>
+            <h3>系统更新公告</h3>
+            <p>网站新增视频模块上线，支持多种格式上传...</p>
+        </article>
+        <!-- 更多个人新闻 -->
+    </section>
+
+    <!-- 社会新闻 -->
+    <section class="news-section social-news">
+        <h2>社会要闻</h2>
+        <ul>
+            <li>
+                <a href="https://news.sina.com.cn/roll/" target="_blank" rel="noopener">
+                    最新时事：全国科技创新大会在京召开
+                </a>
+                <time>2025-04-17</time>
+            </li>
+            <li>
+                <a href="https://news.sina.com.cn/roll/" target="_blank" rel="noopener">
+                    民生热点：五一假期出行量预计创新高
+                </a>
+                <time>2025-04-16</time>
+            </li>
+            <!-- 更多社会新闻 -->
+        </ul>
+    </section>
+</div>
